@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+const flow = require('..');
+
+flow.parse(process.argv);
+if (!flow.args.length) flow.help();

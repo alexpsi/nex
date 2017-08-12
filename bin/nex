@@ -1,5 +1,0 @@
-#!/usr/bin/env node
-const txf = require('..');
-
-txf.parse(process.argv);
-if (!txf.args.length) txf.help();
