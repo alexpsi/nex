@@ -4,6 +4,7 @@ const store = require('./store.js');
 const path = require('path');
 const yaml = require('js-yaml');
 const execa = require('execa');
+const fsp = require('fs-promise');
 const globs = require(path.join('..', '..', 'globals.json'));
 const shorthash = require('shorthash').unique;
 // const mockRenderer = require('../test/helpers/mockRenderer.js');
@@ -39,13 +40,22 @@ class Conf {
   hashFile(p) { return shorthash(fs.readFileSync(p).toString()); }
 
   save() {
-    return new Promise((resolve, reject) => fs.writeFile(
+    return fsp.writeFile(
       path.join(this.tx_root, '.tx.yml'),
       yaml.safeDump(_.omitBy({
         main: store.get('main'),
         staged: store.get('staged'),
-      }, _.isUndefined)),
-      (err, data) => { if (err) return reject(err); resolve(data); }));
+      }, _.isUndefined))
+    );
+  }
+
+  toJSON() {
+    return {
+      tracked: this.getTrackedFiles(),
+      staged: this.getStagedFiles(),
+      branches: _.omitBy(this.get('branches'), _.isUndefined),
+      defs: _.omitBy(this.get('defs'), _.isUndefined),
+    };
   }
 
   enhanceFromTX(p) {
@@ -126,11 +136,11 @@ class Conf {
     return fs.existsSync(path.join(this.tx_root, p));
   }
 
-  isRealFileTracked(p) {
+  isFileTracked(p) {
     return this.get(`branches:${this.branch}:${this.hash(p)}`);
   }
 
-  isRealFileStaged(p) {
+  isFileStaged(p) {
     return this.get(`staged:${this.hash(p)}`);
   }
 

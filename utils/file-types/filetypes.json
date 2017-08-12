@@ -1,0 +1,145 @@
+[{
+	"i18n_type": "POLYGLOT",
+	"i18n_desc": "Virtual txf file format, uploaded to tx as PO with plurals, and gets exported back to json polyglotjs compliant format",
+	"ext": ".js, .jsx, .ejs, .tpl"
+}, {
+	"i18n_type": "RESJSON",
+	"i18n_desc": ".NET JSON Resource Files (.resjson)",
+	"ext": ".resjson"
+}, {
+	"i18n_type": "RESX",
+	"i18n_desc": ".NET Resource Files (.resx, .aspx, .resw)",
+	"ext": ".resx, .aspx, .resw"
+}, {
+	"i18n_type": "MIF",
+	"i18n_desc": "Adobe Framemaker Files (.mif)",
+	"ext": ".mif"
+}, {
+	"i18n_type": "ANDROID",
+	"i18n_desc": "Android String Resources (.xml)",
+	"ext": ".xml"
+}, {
+	"i18n_type": "PLIST",
+	"i18n_desc": "Apple PLIST files (.plist)",
+	"ext": ".plist"
+}, {
+	"i18n_type": "STRINGS",
+	"i18n_desc": "Apple Strings File (.strings)",
+	"ext": ".strings"
+}, {
+	"i18n_type": "CMS",
+	"i18n_desc": "CMS content (.cms)",
+	"ext": ".cms"
+}, {
+	"i18n_type": "CHROME",
+	"i18n_desc": "Chrome i18n JSON files (.json)",
+	"ext": ".json"
+}, {
+	"i18n_type": "DESKTOP",
+	"i18n_desc": "Desktop Entry File (.desktop)",
+	"ext": ".desktop"
+}, {
+	"i18n_type": "HTML",
+	"i18n_desc": "HTML files (.html)",
+	"ext": ".html"
+}, {
+	"i18n_type": "PROPERTIES",
+	"i18n_desc": "Java PROPERTIES File - Latin 1 (.properties)",
+	"ext": ".properties"
+}, {
+	"i18n_type": "UNICODEPROPERTIES",
+	"i18n_desc": "Java PROPERTIES file - Unicode (.properties)",
+	"ext": ".properties"
+}, {
+	"i18n_type": "INI",
+	"i18n_desc": "Joomla INI File (.ini)",
+	"ext": ".ini"
+}, {
+	"i18n_type": "KEYVALUEJSON",
+	"i18n_desc": "Key-value JSON Files (.json)",
+	"ext": ".json"
+}, {
+	"i18n_type": "XLSX",
+	"i18n_desc": "MS XLSX (.xlsx, .xlsm, .xltx, .xltm)",
+	"ext": ".xlsx, .xlsm, .xltx, .xltm"
+}, {
+	"i18n_type": "MAGENTO",
+	"i18n_desc": "Magento CSV File (.csv)",
+	"ext": ".csv"
+}, {
+	"i18n_type": "DOCX",
+	"i18n_desc": "Microsoft Word files (docx-alpha) (.docx)",
+	"ext": ".docx"
+}, {
+	"i18n_type": "DTD",
+	"i18n_desc": "Mozilla DTD File (.dtd)",
+	"ext": ".dtd"
+}, {
+	"i18n_type": "MOZILLAPROPERTIES",
+	"i18n_desc": "Mozilla PROPERTIES file (.properties)",
+	"ext": ".properties"
+}, {
+	"i18n_type": "PHP_ALT_ARRAY",
+	"i18n_desc": "PHP Alternative Array Files (.php)",
+	"ext": ".php"
+}, {
+	"i18n_type": "PHP_ARRAY",
+	"i18n_desc": "PHP Array Files (.php)",
+	"ext": ".php"
+}, {
+	"i18n_type": "PHP_DEFINE",
+	"i18n_desc": "PHP DEFINE statements (.php)",
+	"ext": ".php"
+}, {
+	"i18n_type": "PHP_INI",
+	"i18n_desc": "PHP INI Files (.ini)",
+	"ext": ".ini"
+}, {
+	"i18n_type": "PO",
+	"i18n_desc": "PO File (.po, .pot)",
+	"ext": ".po, .pot"
+}, {
+	"i18n_type": "TXT",
+	"i18n_desc": "Plain text files (.txt)",
+	"ext": ".txt"
+}, {
+	"i18n_type": "QT",
+	"i18n_desc": "Qt File (.ts)",
+	"ext": ".ts"
+}, {
+	"i18n_type": "REQUIREJS",
+	"i18n_desc": "RequireJS files (.js)",
+	"ext": ".js"
+}, {
+	"i18n_type": "SRT",
+	"i18n_desc": "SubRip subtitles (.srt)",
+	"ext": ".srt"
+}, {
+	"i18n_type": "SUB",
+	"i18n_desc": "SubViewer subtitles (.sub)",
+	"ext": ".sub"
+}, {
+	"i18n_type": "WIKI",
+	"i18n_desc": "WIKI file (.wiki)",
+	"ext": ".wiki"
+}, {
+	"i18n_type": "XHTML",
+	"i18n_desc": "XHTML files (.xhtml)",
+	"ext": ".xhtml"
+}, {
+	"i18n_type": "XLIFF",
+	"i18n_desc": "XLIFF file (.xlf, .xliff, .xml)",
+	"ext": ".xlf, .xliff, .xml"
+}, {
+	"i18n_type": "PROPERTIESXML",
+	"i18n_desc": "XML Properties Files (.xml)",
+	"ext": ".xml"
+}, {
+	"i18n_type": "YML",
+	"i18n_desc": "YAML Files (.yml, .yaml)",
+	"ext": ".yml, .yaml"
+}, {
+	"i18n_type": "SBV",
+	"i18n_desc": "Youtube captions (.sbv)",
+	"ext": ".sbv"
+}]
