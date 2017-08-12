@@ -13,6 +13,11 @@ program.
   option('-t, --token [token]', 'Specify the transifex token').
   option('-j, --json', 'Output JSON');
 
+// Commands
+require('./commands/login.js')(program);
+require('./commands/init.js')(program);
+require('./commands/clone.js')(program);
+
 program.on('--help', () => {
   program.log.info(require('chalk').white.bold(`
     EXPERIMENTAL BUILD
