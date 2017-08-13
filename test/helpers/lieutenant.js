@@ -11,7 +11,6 @@ const destroy = require('../../commands/destroy.js').command;
 const Listr = require('listr');
 const credentials = require('./credentials.js');
 
-console.log(credentials);
 module.exports.init = deco({
   Listr,
   test: true,
