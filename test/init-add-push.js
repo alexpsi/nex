@@ -3,7 +3,7 @@ import fixture from './fixtures/fixtureOF.js';
 import {init, push, add, destroy} from './helpers/lieutenant.js';
 
 const openformat = ['PO', 'po', '.po'];
-test('Init a project, add files, push, add more, push, test updated', async t => {
+test.serial('Init a project, add files, push, add more, push, test updated', async t => {
   const p_slug = 'init-add-push';
   let ret;
   process.chdir(fixture.create(p_slug, openformat[1]));
