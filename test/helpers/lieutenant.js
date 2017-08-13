@@ -4,6 +4,8 @@ const status = require('../../commands/status.js').command;
 const clone = require('../../commands/clone.js').command;
 const add = require('../../commands/add.js').command;
 const push = require('../../commands/push.js').command;
+const pull = require('../../commands/pull.js').command;
+const translate = require('../../commands/translate.js').command;
 const destroy = require('../../commands/destroy.js').command;
 
 // const pull = require('../../commands/pull.js').command;
@@ -44,6 +46,18 @@ module.exports.push = deco({
   enhance: true,
   parent: credentials,
 }, push);
+
+module.exports.pull = deco({
+  test: true,
+  enhance: true,
+  parent: credentials,
+}, pull);
+
+module.exports.translate = deco({
+  test: true,
+  enhance: true,
+  parent: credentials,
+}, translate);
 
 module.exports.destroy = deco({
   test: true,

@@ -11,15 +11,19 @@ program.
   option('-u, --user [username]', 'Specify the username').
   option('-p, --pass [password]', 'Specify the password').
   option('-t, --token [token]', 'Specify the transifex token');
+
 // Commands
 require('./commands/login.js')(program);
 require('./commands/init.js')(program);
 require('./commands/clone.js')(program);
+require('./commands/destroy.js')(program);
 
 require('./commands/add.js')(program);
 require('./commands/status.js')(program);
 require('./commands/push.js')(program);
-require('./commands/destroy.js')(program);
+require('./commands/pull.js')(program);
+
+require('./commands/translate.js')(program);
 
 program.on('--help', () => {
   program.log.info(require('chalk').white.bold(`
