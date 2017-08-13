@@ -31,7 +31,7 @@ const command = function(c, tx, log, project, source, target, opts) {
       description: opts.description || '',
       long_description: c.serializeManifest(),
       source_language_code: source,
-    }).catch(e => {}),
+    }),
   }, {
     title: 'Add target languages to project',
     task: () => new Listr(
