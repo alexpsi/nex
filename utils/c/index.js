@@ -18,7 +18,7 @@ class Conf {
       this.branch = 'master';
     }
     // Throw error if in detached head state or empty repo
-    if (this.branch == 'HEAD') throw new Error('Empty git repository');
+    if (this.branch == 'HEAD' && !options.test) throw new Error('Empty git repository');
     // Expose exec as a command to the conf object (SYNC)
     this.exec = execa.shell;
     // Used for monkeypatching the listr renderer when testing
