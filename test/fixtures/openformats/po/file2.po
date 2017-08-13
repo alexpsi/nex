@@ -1,0 +1,35 @@
+#: fixtures/file2.js:11
+msgid "source string 11"
+msgstr "source string 11"
+
+#: fixtures/file2.js:12
+msgid "source string 12"
+msgstr "source string 12"
+
+#: fixtures/file2.js:13
+msgid "source string 13"
+msgstr "source string 13"
+
+#: fixtures/file2.js:14
+msgid "source string 14"
+msgstr "source string 14"
+
+#: fixtures/file2.js:15
+msgid "source string 15"
+msgstr "source string 15"
+
+#: fixtures/file2.js:16
+msgid "source string 16"
+msgstr "source string 16"
+
+#: fixtures/file2.js:17
+msgid "source string 17"
+msgstr "source string 17"
+
+#: fixtures/file2.js:18
+msgid "source string 18"
+msgstr "source string 18"
+
+#: fixtures/file2.js:19
+msgid "source string 19"
+msgstr "source string 19"

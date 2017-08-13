@@ -1,7 +1,7 @@
 const deco = require('../utils/decorator');
 const Listr = require('listr');
 const Observable = require('rxjs').Observable;
-let tx_counts = {add: 0, update: 0};
+let tx_counts = { add: 0, update: 0 };
 
 module.exports = program => program.
   command('push').
@@ -12,6 +12,7 @@ module.exports = program => program.
   action(deco({ enhance: true }, command));
 
 const command = (conf, tx, log, options) => {
+  tx_counts = { add: 0, update: 0 };
   const tasks = new Listr([{
     title: 'Push changes in tracked files to Transifex',
     task: () => update_tracked(conf, tx),

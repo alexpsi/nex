@@ -7,19 +7,22 @@ const execa = require('execa');
 const fsp = require('fs-promise');
 const globs = require(path.join('..', '..', 'globals.json'));
 const shorthash = require('shorthash').unique;
-// const mockRenderer = require('../test/helpers/mockRenderer.js');
+const mockRenderer = require('../../test/helpers/mockRenderer.js');
 
 class Conf {
   constructor(root, options) {
     // Retrieve git branch name if inside a repo or return master
-    this.branch = execa.shellSync('git rev-parse --abbrev-ref HEAD').stdout;
-    this.branch = (this.branch == '') ? 'master' : this.branch;
+    try {
+      this.branch = execa.shellSync('git rev-parse --abbrev-ref HEAD').stdout;
+    } catch (e) {
+      this.branch = 'master';
+    }
     // Throw error if in detached head state or empty repo
     if (this.branch == 'HEAD') throw new Error('Empty git repository');
     // Expose exec as a command to the conf object (SYNC)
     this.exec = execa.shell;
     // Used for monkeypatching the listr renderer when testing
-    // this.ListrRender = (options.test) ? mockRenderer : 'default';
+    this.ListrRender = (options.test) ? mockRenderer : 'default';
     // Merge global conf in conf object
     this.tx_root = root;
     this.store = store;

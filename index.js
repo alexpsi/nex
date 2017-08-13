@@ -19,6 +19,7 @@ require('./commands/clone.js')(program);
 require('./commands/add.js')(program);
 require('./commands/status.js')(program);
 require('./commands/push.js')(program);
+require('./commands/destroy.js')(program);
 
 program.on('--help', () => {
   program.log.info(require('chalk').white.bold(`

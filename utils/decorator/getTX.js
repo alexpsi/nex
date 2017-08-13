@@ -40,11 +40,13 @@ module.exports = (c, options) => {
   host = c.get('main:host') || options.parent.host;
   try {
     RC = {
-      username: (options.parent.token) ? undefined : options.parent.user,
+      username: options.parent.username,
       password: options.parent.pass,
       token: options.parent.token,
       base_url: host,
     };
+    c.set('username', RC.username);
+    if (RC.token) RC.username = undefined;
     tx = patchTX(TransifexApi(RC));
   } catch (e) {
     RC = getRC(host);

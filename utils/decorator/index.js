@@ -15,7 +15,7 @@ module.exports = (deco_opts, cmd) => (...args) => {
     Logger.error('.tx.yml already exists.');
     process.exit();
   }
-  const root = (options.noCONF) ? process.cwd() : getROOT();
+  const root = (options.noCONF || options.stat) ? process.cwd() : getROOT();
   const conf = new C(root, options);
 
   const tx = getTX(conf, options);
