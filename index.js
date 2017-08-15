@@ -19,11 +19,14 @@ require('./commands/clone.js')(program);
 require('./commands/destroy.js')(program);
 
 require('./commands/add.js')(program);
+require('./commands/translate.js')(program);
 require('./commands/status.js')(program);
 require('./commands/push.js')(program);
 require('./commands/pull.js')(program);
 
-require('./commands/translate.js')(program);
+// Webhook listener
+require('./commands/webhooks/setup.js')(program);
+require('./commands/webhooks/listen.js')(program);
 
 program.on('--help', () => {
   program.log.info(require('chalk').white.bold(`
