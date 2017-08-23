@@ -13,7 +13,7 @@ const getListenerConf = () => {
     listener_conf = {
       github: { enabled: false, triggers: [] },
       transifex: { enabled: false, triggers: [] },
-      zapier: { enabled: false, triggers: [] },
+      generic: { enabled: false, triggers: [] },
     };
   }
   return listener_conf;

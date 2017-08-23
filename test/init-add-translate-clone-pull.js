@@ -4,7 +4,7 @@ import fsp from 'fs-promise';
 import {init, push, translate, clone, pull, add, destroy} from './helpers/lieutenant.js';
 
 const openformat = ['PO', 'po', '.po'];
-test('Init a project, add files, push, translate, clone in other dir, pull', async t => {
+test.only('Init a project, add files, push, translate, clone in other dir, pull', async t => {
   const p_slug = 'init-add-translate';
   let ret;
   process.chdir(fixture.create(p_slug, openformat[1]));
