@@ -14,7 +14,7 @@ const command = (options) => {
     choices: [
       'Transifex',
       'Github',
-      'Zapier (tbi)'
+      'Generic'
     ],
   }]).then(answer => setup(answer.webhook)).then(applySetup);
 };

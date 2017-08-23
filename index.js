@@ -27,6 +27,7 @@ require('./commands/pull.js')(program);
 // Webhook listener
 require('./commands/webhooks/setup.js')(program);
 require('./commands/webhooks/listen.js')(program);
+require('./commands/webhooks/git.js')(program);
 
 program.on('--help', () => {
   program.log.info(require('chalk').white.bold(`
